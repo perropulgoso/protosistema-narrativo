@@ -26,6 +26,7 @@
   input {
     display: block;
     min-width: 100%;
+    font-size: 20px;
   }
   
   .storyp {
