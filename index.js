@@ -1,13 +1,13 @@
 let aventura;
-
-const lorem = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mas`;
-// const lorem = "";
+let valuesList;
 
 main();
 
 async function main() {
   const scenesPath = "./aventuraInteractiva.json";
   const scenes = await (await fetch(scenesPath)).json();
+  const valuesPath = "./espaciosRespuestas.json";
+  valuesList = await (await fetch(valuesPath)).json();
 
   // for (let k of Object.keys(scenes)) {
   //   scenes[k].image = "mapa";
@@ -16,14 +16,15 @@ async function main() {
   const options = {"typewriterSpeed":0,"adventureSlide":false,"adventureScroll":false,"evalTags":true,"backBtn":false,"restartBtn":false,"defaultCSS":true, defaultCSS: false, sceneCallback: sceneCallback(scenes)};
 
   aventura = new Aventura("es", options);
-  const mapaImage = await createMap({});
-  aventura.storyPreload.mapa = mapaImage;
+  // const mapaImage = await createMap({});
+  // aventura.storyPreload.mapa = mapaImage;
   aventura.setScenes(scenes).startAdventure('Instrucciones');
   // aventura.setScenes(scenes).startAdventure('final');
 }
 
 async function createMap(register, type = "A") {
   const mapPath = `./mapas/mapa${type}.png`;
+  console.log(mapPath);
   const img = new Image();
   img.src = mapPath;
   await new Promise(r => { img.onload = () => { r(img) }});
@@ -142,19 +143,16 @@ function sceneCallback(scenes) {
     }
 
     // console.log(register);
-
-    const mapaImage = await createMap(register);
-    aventura.storyPreload.mapa = mapaImage;
+    // const mapaImage = await createMap(register);
+    // aventura.storyPreload.mapa = mapaImage;
     
-    if (e.key === "mapa") {
-      console.log(register);
-
+    if (e.key === "final") {
       let type = undefined;
       if (register["_6_pub_and_cont"] !== undefined) {
         type = "A";
       } else if (register["_6_cont_and_tec"] !== undefined) {
         type = "B"
-      } else if (register["_6_cont_and_tec"] !== undefined) {
+      } else if (register["_6_pub_and_tec"] !== undefined) {
         type = "C"
       }
       const mapaImage = await createMap(register, type);
@@ -169,7 +167,6 @@ function sceneCallback(scenes) {
 }
 
 function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight) {
-  // Split on explicit newlines to handle paragraphs
   const paragraphs = text.split('\n');
 
   paragraphs.forEach((para, pIndex) => {
@@ -190,28 +187,12 @@ function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight) {
         line = testLine;
       }
     }
-    // Draw any remaining text in this paragraph
     ctx.fillText(line, x, currentY);
-    // After each paragraph, shift the starting y down by one extra line
     y = currentY + lineHeight;
   });
 }
 
 function findValue(register, key, type = "inputValue") {
-  const valuesList = {
-    contenidoText: ["cont_1", "pub_4_cont", "tec_4_cont", "_7_pub_and_tec_and_cont"],
-    contextosText: ["contextos"],
-    mediosText: ["tec_1", "cont_4_tec", "pub_4_tec", "_7_pub_and_cont_and_tec"],
-    necesidadText: ["solucion_problema"],
-    audienciasText: ["pub_1", "cont_4_pub", "tec_4_pub", "_7_cont_and_tec_and_pub"],
-    fuentesText:["cont_2", "tec_5_cont_extra", "pub_5_cont_extra", "_8_pub_and_tec_and_cont_extra"],
-    functionalidadesText:["tec_2", "cont_5_tec_extra", "pub_5_tec_extra", "_8_pub_and_cont_and_tec_extra"],
-    incentivosText:["pub_2", "tec_5_pub_extra", "cont_5_pub_extra", "_8_cont_and_tec_and_pub_extra"],
-    audiencias_contenidosText: ["_6_pub_and_cont"],
-    usos_posiblesText: ["_6_cont_and_tec"],
-    habilidades_experienciaText: ["_6_pub_and_tec"]
-  }
-
   let value = "";
   for (let k of valuesList[key]) {
     if (register[k] !== undefined) {

@@ -13,13 +13,14 @@
   }
   
   .storydiv {
-    border: solid black 1px;
+    border: solid rgb(0, 0, 0) 1px;
     width: 100%;
     display: flex;
-    padding:  2rem 2rem 1rem 2rem;
+    padding:  1rem 1rem 1rem 1rem;
     flex-direction: column;
     box-sizing: border-box;
     border-radius: 10px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   }
 
   input {
@@ -47,6 +48,7 @@
     font-size: 18px;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   }
   
   .storybutton:hover {

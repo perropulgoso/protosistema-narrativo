@@ -1,0 +1,13 @@
+{
+  "contenidoText": ["cont_1", "pub_4_cont", "tec_4_cont", "_7_pub_and_tec_and_cont"],
+  "contextosText": ["contextos"],
+  "mediosText": ["tec_1", "cont_4_tec", "pub_4_tec", "_7_pub_and_cont_and_tec"],
+  "necesidadText": ["solucion_problema"],
+  "audienciasText": ["pub_1", "cont_4_pub", "tec_4_pub", "_7_cont_and_tec_and_pub"],
+  "fuentesText":["cont_2", "tec_5_cont_extra", "pub_5_cont_extra", "_8_pub_and_tec_and_cont_extra"],
+  "functionalidadesText":["tec_2", "cont_5_tec_extra", "pub_5_tec_extra", "_8_pub_and_cont_and_tec_extra"],
+  "incentivosText":["pub_2", "tec_5_pub_extra", "cont_5_pub_extra", "_8_cont_and_tec_and_pub_extra"],
+  "audiencias_contenidosText": ["_6_pub_and_cont"],
+  "usos_posiblesText": ["_6_cont_and_tec"],
+  "habilidades_experienciaText": ["_6_pub_and_tec"]
+}
