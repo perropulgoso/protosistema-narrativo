@@ -6,7 +6,7 @@ const lorem = `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean 
 main();
 
 async function main() {
-  const scenesPath = "/aventuraInteractiva.json";
+  const scenesPath = "./aventuraInteractiva.json";
   const scenes = await (await fetch(scenesPath)).json();
 
   // for (let k of Object.keys(scenes)) {
@@ -23,7 +23,7 @@ async function main() {
 }
 
 async function createMap(register, type = "A") {
-  const mapPath = `/mapas/mapa${type}.png`;
+  const mapPath = `./mapas/mapa${type}.png`;
   const img = new Image();
   img.src = mapPath;
   await new Promise(r => { img.onload = () => { r(img) }});
