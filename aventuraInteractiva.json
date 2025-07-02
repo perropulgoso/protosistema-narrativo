@@ -1,0 +1,548 @@
+{
+  "Instrucciones": {
+    "text": "Bienvenida/o/e a este ejercicio sobre sistemas narrativos digitales. El objetivo es elegir las opciones y contestar las preguntas sobre una narrativa digital hipotética que quisieras contar.\nSi no sabes la respuesta a alguna de las preguntas abiertas, no importa (puedes escribir \"No sé\", aunque sería ideal tener alguna respuesta preliminar o probable). Cada respuesta abierta tiene un máximo de 280 caracteres. \nRecuerda que este ejercicio es apenas una prueba inicial, y lo puedes ir puliendo a lo largo del módulo, ¡así que no le temas a respuestas raras!",
+    "display": {
+      "x": 1105,
+      "y": 80
+    },
+    "options": [
+      {
+        "btn": "Siguiente",
+        "scene": "Pregunta_inicial"
+      }
+    ]
+  },
+  "Pregunta_inicial": {
+    "text": "Quiero hacer una narrativa digital. ¿Cuál es mi motivación inicial?",
+    "display": {
+      "x": 798,
+      "y": 419
+    },
+    "options": [
+      {
+        "btn": "trabajar con un medio/formato/soporte tecnológico específico",
+        "scene": "tec_1"
+      },
+      {
+        "btn": "difundir un tipo de contenido",
+        "scene": "cont_1"
+      },
+      {
+        "btn": "llegar a un tipo de audiencia en particular",
+        "scene": "pub_1"
+      }
+    ]
+  },
+  "tec_1": {
+    "text": "¿En qué medio/formato/soporte tecnológico quiero trabajar? Ej: un sitio web (archivo digital, muestra de datos, mapa, etc.), un software específico, una tecnología móvil, una instalación híbrida, realidad virtual/aumentada, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 315,
+      "y": 715
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "tec_2"
+      }
+    ]
+  },
+  "cont_1": {
+    "text": "¿Qué tipo de contenidos quiero difundir? Ej: textos/imágenes/audios sobre x tema, datos sobre x tema, un repositorio de x tema, testimonios múltiples de x tema, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1174,
+      "y": 717
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "cont_2"
+      }
+    ]
+  },
+  "pub_1": {
+    "text": "¿Qué tipo de públicos quiero alcanzar? Ej: infantil, universitario, adulto mayor, interesados en poesía, interesados en historia, curiosos por saber sobre recursos hídricos en Colombia, desprevenidos absolutos, asistentes a x museo, población rural, tecnológicamente letrados/iletrados, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 2063,
+      "y": 710
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "pub_2"
+      }
+    ]
+  },
+  "tec_2": {
+    "text": " ¿Qué funcionalidades permitiría este soporte/tecnología/formato?\nEj: llevar a todas partes, utilizar en varios contextos, actualizar información en tiempo real, tener pantalla táctil, navegar con el mouse, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 309,
+      "y": 1003
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "tec_3_decision"
+      }
+    ]
+  },
+  "tec_3_decision": {
+    "text": "Este soporte/tecnología/formato se adecuaría bien a...",
+    "display": {
+      "x": 294,
+      "y": 1282
+    },
+    "options": [
+      {
+        "btn": "cierto tipo de público",
+        "scene": "tec_4_pub"
+      },
+      {
+        "btn": "cierto tipo de contenido",
+        "scene": "tec_4_cont"
+      }
+    ]
+  },
+  "tec_4_pub": {
+    "text": "¿Qué tipo de público se adecuaría bien, le sacaría mejor provecho al soporte/tecnología/formato? Ej: infantil, universitario, adulto mayor, asistentes a x museo, población rural, que esté en movimiento, tecnológicamente letrados/iletrados, con conexión a internet veloz/lenta, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 101,
+      "y": 1500
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "tec_5_pub_extra"
+      }
+    ]
+  },
+  "tec_4_cont": {
+    "text": "¿Qué tipo de contenido se adecuaría bien al soporte/tecnología/formato? Ej: textos/imágenes/audios expresados de x forma, datos graficados de x forma, un repositorio organizado de x forma, testimonios múltiples de x tema, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 616,
+      "y": 1499
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "tec_5_cont_extra"
+      }
+    ]
+  },
+  "tec_5_pub_extra": {
+    "text": "Texto de la escena: ¿Qué podría empujar a este tipo de público hacia mi narrativa?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": -26,
+      "y": 1776
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_6_pub_and_tec"
+      }
+    ]
+  },
+  "tec_5_cont_extra": {
+    "text": "¿De dónde provendría este contenido?",
+    "display": {
+      "x": 279,
+      "y": 1776
+    },
+    "options": [
+      {
+        "btn": "recopilado de fuentes existentes",
+        "scene": "_6_cont_and_tec"
+      },
+      {
+        "btn": "autogenerado",
+        "scene": "_6_cont_and_tec"
+      },
+      {
+        "btn": "producido por mí",
+        "scene": "_6_cont_and_tec"
+      },
+      {
+        "btn": "agregado por usuarios",
+        "scene": "_6_cont_and_tec"
+      },
+      {
+        "btn": "producido de múltiples formas",
+        "scene": "_6_cont_and_tec"
+      }
+    ]
+  },
+  "_6_pub_and_tec": {
+    "text": "Texto de la escena: ¿Qué habilidades o experiencias previas tendría que tener el público para interactuar exitosamente con el soporte/tecnología/formato?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 494,
+      "y": 2319
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_7_pub_and_tec_and_cont"
+      }
+    ]
+  },
+  "_6_cont_and_tec": {
+    "text": "¿Qué usos posibles podrían derivarse de este contenido alojado en ese soporte/tecnología/formato?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1744,
+      "y": 2318
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_7_cont_and_tec_and_pub"
+      }
+    ]
+  },
+  "cont_2": {
+    "text": "¿De dónde provendría este contenido?",
+    "display": {
+      "x": 907.5,
+      "y": 1021
+    },
+    "options": [
+      {
+        "btn": "recopilado de fuentes existentes",
+        "scene": "cont_3_decision"
+      },
+      {
+        "btn": "autogenerado",
+        "scene": "cont_3_decision"
+      },
+      {
+        "btn": "producido por mí",
+        "scene": "cont_3_decision"
+      },
+      {
+        "btn": "agregado por usuarios",
+        "scene": "cont_3_decision"
+      },
+      {
+        "btn": "producido de múltiples formas",
+        "scene": "cont_3_decision"
+      }
+    ]
+  },
+  "cont_3_decision": {
+    "text": " Este contenido se adecuaría bien a...",
+    "display": {
+      "x": 1218.5,
+      "y": 1263
+    },
+    "options": [
+      {
+        "btn": "cierto tipo de público",
+        "scene": "cont_4_pub"
+      },
+      {
+        "btn": "cierto tipo de medio/formato/soporte tecnológico",
+        "scene": "cont_4_tec"
+      }
+    ]
+  },
+  "cont_4_pub": {
+    "text": "\nTexto de la escena: ¿Qué tipo de públicos se adecuarían bien a este contenido? Ej: infantil, universitario, adulto mayor, interesados en poesía, interesados en historia, curiosos por saber sobre recursos hídricos en Colombia, desprevenidos absolutos, asistentes a un museo, población rural, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1145.5,
+      "y": 1505
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "cont_5_pub_extra"
+      }
+    ]
+  },
+  "cont_4_tec": {
+    "text": "¿En qué medio/formato/soporte tecnológico funcionaría bien este contenido? Ej: un sitio web (archivo digital, muestra de datos, mapa, etc.), un software específico, una tecnología móvil, una instalación híbrida, realidad virtual/aumentada, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1506.5,
+      "y": 1510
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "cont_5_tec_extra"
+      }
+    ]
+  },
+  "cont_5_pub_extra": {
+    "text": "¿Qué podría empujar a este tipo de público hacia mi narrativa?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1113.5,
+      "y": 1769
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_6_pub_and_cont"
+      }
+    ]
+  },
+  "cont_5_tec_extra": {
+    "text": "¿Qué funcionalidades permitiría ejecutar este soporte/tecnología/formato?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1416.5,
+      "y": 1767
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_6_cont_and_tec"
+      }
+    ]
+  },
+  "_6_pub_and_cont": {
+    "text": "¿Qué aportaría el público al contenido? ¿Qué aportaría el contenido al público?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1129.5,
+      "y": 2320
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_7_pub_and_cont_and_tec"
+      }
+    ]
+  },
+  "pub_2": {
+    "text": "¿Qué podría empujar a este tipo de público hacia mi narrativa?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 2067,
+      "y": 1014
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "pub_3_decision"
+      }
+    ]
+  },
+  "pub_3_decision": {
+    "text": "Texto de la escena: Este público se adecuaría bien a...",
+    "display": {
+      "x": 1963,
+      "y": 1260
+    },
+    "options": [
+      {
+        "btn": "cierto tipo de contenido",
+        "scene": "pub_4_cont"
+      },
+      {
+        "btn": "cierto tipo de medio/formato/soporte tecnológico",
+        "scene": "pub_4_tec"
+      }
+    ]
+  },
+  "pub_4_cont": {
+    "text": "¿Qué tipo de contenidos se adecuarían bien a este público? Ej: Ej: educativos, entretenimiento, sobre historia, textos/imágenes/audios sobre de x tema, datos graficados de x forma, un repositorio organizado de x forma, multimedia, testimonios múltiples de x tema, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1864,
+      "y": 1509
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "pub_5_cont_extra"
+      }
+    ]
+  },
+  "pub_4_tec": {
+    "text": "¿Qué tipo de soporte/tecnología/formato se adecuaría bien a este público? Ej: un sitio web (archivo digital, muestra de datos, mapa, etc.), un software específico, una tecnología móvil, una instalación híbrida, realidad virtual/aumentada, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 2232,
+      "y": 1506
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "pub_5_tec_extra"
+      }
+    ]
+  },
+  "pub_5_cont_extra": {
+    "text": "¿De dónde provendría este contenido?",
+    "display": {
+      "x": 1711,
+      "y": 1766
+    },
+    "options": [
+      {
+        "btn": "recopilado de fuentes existentes",
+        "scene": "_6_pub_and_cont"
+      },
+      {
+        "btn": "autogenerado",
+        "scene": "_6_pub_and_cont"
+      },
+      {
+        "btn": "producido por mí",
+        "scene": "_6_pub_and_cont"
+      },
+      {
+        "btn": "agregado por usuarios",
+        "scene": "_6_pub_and_cont"
+      },
+      {
+        "btn": "producido de múltiples formas",
+        "scene": "_6_pub_and_cont"
+      }
+    ]
+  },
+  "pub_5_tec_extra": {
+    "text": "¿Y qué funcionalidades permitiría ejecutar este soporte/tecnología/formato?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 2330,
+      "y": 1951
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_6_pub_and_tec"
+      }
+    ]
+  },
+  "_7_pub_and_tec_and_cont": {
+    "text": "¿Qué tipo de contenidos se adecuarían bien a este público y a esta tecnología? Ej: Ej: educativos, entretenimiento, sobre historia, textos/imágenes/audios sobre de x tema, datos graficados de x forma, un repositorio organizado de x forma, multimedia, testimonios múltiples de x tema, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 508,
+      "y": 2575
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_8_pub_and_tec_and_cont_extra"
+      }
+    ]
+  },
+  "_7_pub_and_cont_and_tec": {
+    "text": "¿En qué medio/formato/soporte tecnológico podrían interactuar el público y el contenido? Ej: un sitio web (archivo digital, muestra de datos, mapa, etc.), un software específico, una tecnología móvil, una instalación híbrida, realidad virtual/aumentada, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1127,
+      "y": 2563
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_8_pub_and_cont_and_tec_extra"
+      }
+    ]
+  },
+  "_7_cont_and_tec_and_pub": {
+    "text": "¿Qué tipo de públicos podrían interactuar en esta configuración? Ej: infantil, universitario, adulto mayor, interesados en poesía, interesados en historia, curiosos por saber sobre recursos hídricos en Colombia, desprevenidos absolutos, asistentes a x museo, población rural, tecnológicamente letrados/iletrados, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1754,
+      "y": 2568
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "_8_cont_and_tec_and_pub_extra"
+      }
+    ]
+  },
+  "_8_pub_and_tec_and_cont_extra": {
+    "text": "¿De dónde provendría este contenido?",
+    "display": {
+      "x": 145,
+      "y": 2867
+    },
+    "options": [
+      {
+        "btn": "recopilado de fuentes existentes",
+        "scene": "contextos"
+      },
+      {
+        "btn": "autogenerado",
+        "scene": "contextos"
+      },
+      {
+        "btn": "producido por mí",
+        "scene": "contextos"
+      },
+      {
+        "btn": "agregado por usuarios",
+        "scene": "contextos"
+      },
+      {
+        "btn": "producido de múltiples formas",
+        "scene": "contextos"
+      }
+    ]
+  },
+  "_8_pub_and_cont_and_tec_extra": {
+    "text": "Qué funcionalidades permitiría este soporte/tecnología/formato?\nEj: llevar a todas partes, utilizar en varios contextos, actualizar información en tiempo real, tener pantalla táctil, navegar con el mouse, etc.\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1117,
+      "y": 2848
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "contextos"
+      }
+    ]
+  },
+  "_8_cont_and_tec_and_pub_extra": {
+    "text": "¿Qué podría empujar a este tipo de público hacia mi narrativa?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1745,
+      "y": 2832
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "contextos"
+      }
+    ]
+  },
+  "contextos": {
+    "text": "¿En qué contextos, tiempos y situaciones del día a día podría usarse esta narrativa digital?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1125,
+      "y": 3159
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "solucion_problema"
+      }
+    ]
+  },
+  "solucion_problema": {
+    "text": "Finalmente, ¿qué necesidad o problema soluciona esta narrativa digital?\n<label>Pon tu respuesta aquí: <input id='user-input-aventura' type=\\\"text\\\" /></label>",
+    "display": {
+      "x": 1127,
+      "y": 3426
+    },
+    "options": [
+      {
+        "btn": "siguiente",
+        "scene": "final"
+      }
+    ]
+  },
+  "final": {
+    "text": " ¡Listo, acabaste! Dale clic a \"terminar\" para ver el primer mapa de tu narrativa digital hipotética. ¡No olvides guardar un pantallazo y compartirlo en clase según las instrucciones!",
+    "display": {
+      "x": 1136,
+      "y": 3697
+    },
+    "options": [
+      {
+        "btn": "terminar",
+        "scene": "mapa"
+      }
+    ]
+  },"mapa": {
+    "image": "mapa",
+    "text": "",
+    "display": {
+      "x": 1136,
+      "y": 4000
+    }
+  }
+}
