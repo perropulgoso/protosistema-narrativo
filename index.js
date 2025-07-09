@@ -43,7 +43,7 @@ async function createMap(register, type = "A") {
   const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
 
-  ctx.font = '22px Arial';
+  ctx.font = '24px Arial';
   ctx.textAlign = "center";
 
   const widthEllipses = 420;
@@ -51,36 +51,38 @@ async function createMap(register, type = "A") {
 
   // Elipses
   const contenidoText = findValue(register, "contenidoText", "inputValue");
-  drawWrappedText(ctx, contenidoText, divx*12.5, divy*2.5, widthEllipses, divy*0.3);
+  drawWrappedText(ctx, contenidoText, divx*12.5, divy*2.8, widthEllipses, divy*0.3);
 
   const contextosText = findValue(register, "contextosText", "inputValue");
-  drawWrappedText(ctx, contextosText, divx*12.5, divy*6.2, widthEllipses, divy*0.3);
+  drawWrappedText(ctx, contextosText, divx*12.5, divy*6.4, widthEllipses, divy*0.3);
 
   const mediosText = findValue(register, "mediosText", "inputValue");
-  drawWrappedText(ctx, mediosText, divx*3.7, divy*7.8, widthEllipses, divy*0.3);
+  drawWrappedText(ctx, mediosText, divx*3.7, divy*8, widthEllipses, divy*0.3);
 
   const necesidadText = findValue(register, "necesidadText", "inputValue");
-  drawWrappedText(ctx, necesidadText, divx*20.5, divy*1.2, widthEllipses, divy*0.3);
+  drawWrappedText(ctx, necesidadText, divx*20.5, divy*1.4, widthEllipses, divy*0.3);
 
   const audienciasText = findValue(register, "audienciasText", "inputValue");
-  drawWrappedText(ctx, audienciasText, divx*20.3, divy*7.8, widthEllipses, divy*0.3);
+  drawWrappedText(ctx, audienciasText, divx*20.3, divy*8, widthEllipses, divy*0.3);
 
   // Recuadros
   const fuentesText = findValue(register, "fuentesText", "optionSelected");
-  drawWrappedText(ctx, fuentesText, divx*12.5, divy*0.8, widthRects, divy*0.3);
+  drawWrappedText(ctx, fuentesText, divx*12.5, divy*1.1, widthRects, divy*0.3);
+
+  ctx.font = '21px Arial';
 
   const functionalidadesText = findValue(register, "functionalidadesText", "inputValue");
-  drawWrappedText(ctx, functionalidadesText, divx*3.7, divy*10.7, widthRects, divy*0.3);
+  drawWrappedText(ctx, functionalidadesText, divx*3.7, divy*10.6, widthRects, divy*0.3);
 
   const incentivosText = findValue(register, "incentivosText", "inputValue");
-  drawWrappedText(ctx, incentivosText, divx*20.2, divy*10.7, widthRects, divy*0.3);
+  drawWrappedText(ctx, incentivosText, divx*20.2, divy*10.6, widthRects, divy*0.3);
 
   // Recuadros variables
   const audiencias_contenidosText = findValue(register, "audiencias_contenidosText", "inputValue");
-  drawWrappedText(ctx, audiencias_contenidosText, divx*19.5, divy*5.2, widthRects, divy*0.3);
+  drawWrappedText(ctx, audiencias_contenidosText, divx*19.2, divy*4.9, widthRects, divy*0.3);
 
   const usos_posiblesText = findValue(register, "usos_posiblesText", "inputValue");
-  drawWrappedText(ctx, usos_posiblesText, divx*4.7, divy*4.7, widthRects, divy*0.3);
+  drawWrappedText(ctx, usos_posiblesText, divx*5.5, divy*4.7, widthRects, divy*0.3);
 
   const habilidades_experienciaText = findValue(register, "habilidades_experienciaText", "inputValue");
   drawWrappedText(ctx, habilidades_experienciaText, divx*12.4, divy*9.6, widthRects, divy*0.3);
@@ -136,7 +138,7 @@ function sceneCallback(scenes) {
     const input = document.querySelector("#user-input-aventura");
     
     if (input) {
-      input.setAttribute("maxlength", "280");
+      input.setAttribute("maxlength", "180");
       input.addEventListener("input", (event) => {
         register[e.key].inputValue = event.target.value;
       });
